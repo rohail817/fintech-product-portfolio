@@ -2,9 +2,25 @@
 
 Connect deal inputs, underwriting formulas, policy thresholds, downside scenarios and a reviewable recommendation in one stateful workspace.
 
-[Open the live demo](https://urrly.rohailabid.com/projects/bridge/) · [Portfolio overview](https://urrly.rohailabid.com/) · [Local demo pack](urrly-demo-pack.zip)
+[Open demo](https://urrly.rohailabid.com/projects/bridge/) · [Portfolio](https://urrly.rohailabid.com/)
 
-## Technical focus
+## Credit view
+
+### Underwrite the case
+
+Assess debt sizing, cash flow and repayment against the deal assumptions and policy thresholds.
+
+### Challenge the downside
+
+Stress the case and inspect which constraints become binding, including the effect on the recommendation.
+
+### Prepare a decision
+
+Bring quantitative results, exceptions, conditions and reviewer judgment together in a consistent credit review.
+
+## Technical view
+
+AI-assisted prototype. These notes describe the current implementation.
 
 TypeScript · React · Policy and stress engines
 
@@ -20,18 +36,16 @@ Formula substitutions, source lineage and policy evidence make it possible to in
 
 The demo carries one deal context across the dashboard, underwriting, stress lab and credit review instead of asking the reviewer to rebuild a case on each screen.
 
-## Review path
+## Try it
 
 Change an underwriting assumption, select a downside scenario and compare the result with its formula and policy tests.
 
-## Scope
+## Demo scope
 
 A synthetic multifamily case demonstrates the workflow. It is not a live loan-origination integration or autonomous credit decision.
 
-<details><summary>Screenshot of the working demo</summary>
+<details><summary>Screenshot</summary>
 
-![Bridge Credit Intelligence](./bridge.png)
+![Bridge Credit Intelligence](bridge.png)
 
 </details>
-
-Independent work by Rohail Abid. Urrly branding is illustrative. Fictional data is used throughout.

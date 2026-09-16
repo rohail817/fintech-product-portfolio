@@ -2,9 +2,25 @@
 
 Build a credit memo around structured source facts and authored judgment, with a practical document workspace and Word output.
 
-[Open the live demo](https://urrly.rohailabid.com/projects/credit/) · [Portfolio overview](https://urrly.rohailabid.com/) · [Local demo pack](urrly-demo-pack.zip)
+[Open demo](https://urrly.rohailabid.com/projects/credit/) · [Portfolio](https://urrly.rohailabid.com/)
 
-## Technical focus
+## Credit view
+
+### Prepare the memo
+
+Organize the transaction, source analysis and credit narrative around the document the reviewer needs.
+
+### Keep judgment explicit
+
+Distinguish source facts from authored rationale, mitigants and recommendations.
+
+### Move to review
+
+Use the structured workflow to prepare a reviewable memo and export an editable Word document.
+
+## Technical view
+
+AI-assisted prototype. These notes describe the current implementation.
 
 Browser application · Structured documents · Word export
 
@@ -18,20 +34,18 @@ The application is organized around preparing and reviewing the memo, including 
 
 ### Local document processing
 
-The showcase preserves local document protections. Its activity tracker records broad page events, not document contents or entered financial information.
+The document workflow runs in the browser and preserves local handling of its source files and generated documents.
 
-## Review path
+## Try it
 
 Choose the synthetic demo, open Sources & analysis, then inspect the memo and its Word export.
 
-## Scope
+## Demo scope
 
 This is a local synthetic document workflow. It is not represented as a deployed bank system or an independently verified AI underwriting service.
 
-<details><summary>Screenshot of the working demo</summary>
+<details><summary>Screenshot</summary>
 
-![Credit Decision Studio](./credit.png)
+![Credit Decision Studio](credit.png)
 
 </details>
-
-Independent work by Rohail Abid. Urrly branding is illustrative. Fictional data is used throughout.

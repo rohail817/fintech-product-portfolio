@@ -1,6 +1,6 @@
 # Engineering notes
 
-The strongest technical evidence is the behavior and structure of the working applications. This guide explains what to inspect, with current scope made explicit.
+Implementation notes for AI-assisted prototypes. The descriptions below explain software behavior and design choices.
 
 ## Collateral Control: configuration → calculation → evidence
 
@@ -42,13 +42,3 @@ Structure uses typed and validated scenarios with a monthly cash-flow model. Tim
 ## Credit Decision Studio: an actual document workflow
 
 The product centers on the work product: a structured memo, evidence review, authored rationale and Word export. It illustrates the difference between generating text and designing a usable preparation-and-review workflow. The browser demo preserves local document protections.
-
-## Delivery and observability
-
-The public portfolio uses a Cloudflare-compatible Worker and persistent SQLite event storage. HTML requests receive signed tracking context; allowlisted interaction events use idempotent identifiers. Owner reports require a separate read key. Marked test activity and a reporting baseline separate setup from later audience traffic.
-
-The site records broad page signals and approximate network geography, not workbooks, typed text, financial values, raw IP addresses or document contents. Geographic and interaction signals cannot identify a specific person, and link scanners or browser blocking can affect records. This infrastructure demonstrates deployable delivery and bounded observability, not an audited enterprise control environment.
-
-## Development approach
-
-These are independent projects built with AI-assisted coding tools. The portfolio emphasizes explicit domain models, inspectable transformations, focused tests and clear product boundaries. It is intended to support a technical conversation about how I could contribute to a fintech product or operating team.

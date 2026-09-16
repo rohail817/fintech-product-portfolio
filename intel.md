@@ -2,9 +2,25 @@
 
 A homebuilding intelligence product designed around source provenance, repeatable methodology, historical validation and controlled publication.
 
-[Open the live demo](https://urrly.rohailabid.com/projects/intel/) · [Portfolio overview](https://urrly.rohailabid.com/) · [Local demo pack](urrly-demo-pack.zip)
+[Open demo](https://urrly.rohailabid.com/projects/intel/) · [Portfolio](https://urrly.rohailabid.com/)
 
-## Technical focus
+## Credit view
+
+### Market context
+
+Organize housing and economic indicators around the conditions that matter to homebuilder lending.
+
+### A recurring research capability
+
+Support a consistent internal view of markets and the preparation of original research for borrower conversations.
+
+### Development stage
+
+Review the product direction and methodology approach. This portfolio presents a brief; live market feeds and published scores are not demonstrated.
+
+## Technical view
+
+AI-assisted prototype. These notes describe the current implementation.
 
 Data modeling · Research methodology · Publication controls
 
@@ -16,22 +32,20 @@ The aim is a maintainable source-to-publication workflow that supports recurring
 
 Source and period metadata distinguish observations from derived measures; scoring and validation work make assumptions inspectable.
 
-### An honest development boundary
+### Current scope
 
-The portfolio includes a brief. Live feeds, published market scores and live AI narratives are not presented as verified working features.
+The brief describes the research pipeline and publication approach. Live AI narratives and published market scores remain development work.
 
-## Review path
+## Try it
 
 Read the brief to see how source observations, derived measures and publication decisions fit together.
 
-## Scope
+## Demo scope
 
 Development-stage project brief, not an interactive live-data product.
 
-<details><summary>Screenshot of the working demo</summary>
+<details><summary>Screenshot</summary>
 
-![HBF Intel](./intel.png)
+![HBF Intel](intel.png)
 
 </details>
-
-Independent work by Rohail Abid. Urrly branding is illustrative. Fictional data is used throughout.
