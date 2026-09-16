@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "canyon_ridge_vertical_bb",
+  "synthetic": true,
+  "description": "Fixed fictional vertical borrowing-base engine proof. It is not a persisted or operational facility result.",
+  "calculationType": "borrowing_base_engine_proof",
+  "currency": "USD",
+  "ruleVersion": {
+    "organizationId": "10000000-0000-4000-8000-000000000001",
+    "facilityId": "20000000-0000-4000-8000-000000000001",
+    "ruleVersionId": "30000000-0000-4000-8000-000000000001",
+    "ruleVersionStatus": "active",
+    "effectiveFrom": "2026-01-01",
+    "effectiveTo": null,
+    "facilityPattern": "vertical_borrowing_base",
+    "configurationHash": "8ec8b605577f1762234eea299f4efcc6",
+    "rules": [
+      {
+        "id": "40000000-0000-4000-8000-000000000010",
+        "ruleCode": "eligible_statuses",
+        "ruleKind": "eligibility",
+        "evaluationOrder": 10,
+        "displayName": "Eligible vertical statuses",
+        "valueUnit": "text",
+        "numericValue": null,
+        "textValue": "spec_home | presold_home | model_home",
+        "parameters": { "statuses": ["spec_home", "presold_home", "model_home"] },
+        "agreementCitation": "Synthetic Agreement §4.1"
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000020",
+        "ruleCode": "borrowing_base_basis",
+        "ruleKind": "basis",
+        "evaluationOrder": 20,
+        "displayName": "Collateral basis",
+        "valueUnit": "formula_reference",
+        "numericValue": null,
+        "textValue": "lesser_of(documented_cost, supported_value)",
+        "parameters": { "future_engine": true, "rounding": "down_to_cent" },
+        "agreementCitation": "Synthetic Agreement §4.2"
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000030",
+        "ruleCode": "spec_advance",
+        "ruleKind": "advance_rate",
+        "evaluationOrder": 30,
+        "displayName": "Spec advance rate",
+        "valueUnit": "basis_points",
+        "numericValue": 7500,
+        "textValue": null,
+        "parameters": { "class": "spec_home" },
+        "agreementCitation": "Synthetic Agreement §4.3(a)"
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000040",
+        "ruleCode": "presold_advance",
+        "ruleKind": "advance_rate",
+        "evaluationOrder": 40,
+        "displayName": "Presold advance rate",
+        "valueUnit": "basis_points",
+        "numericValue": 8000,
+        "textValue": null,
+        "parameters": { "class": "presold_home" },
+        "agreementCitation": "Synthetic Agreement §4.3(b)"
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000050",
+        "ruleCode": "model_concentration",
+        "ruleKind": "concentration",
+        "evaluationOrder": 50,
+        "displayName": "Model concentration cap",
+        "valueUnit": "basis_points",
+        "numericValue": 2000,
+        "textValue": null,
+        "parameters": { "class": "model_home", "applies_to": "future_aggregate" },
+        "agreementCitation": "Synthetic Agreement §4.4"
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000060",
+        "ruleCode": "inventory_aging",
+        "ruleKind": "aging",
+        "evaluationOrder": 60,
+        "displayName": "Maximum inventory age",
+        "valueUnit": "days",
+        "numericValue": 365,
+        "textValue": null,
+        "parameters": { "start_event": "future_vertical_start" },
+        "agreementCitation": "Synthetic Agreement §4.5"
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000070",
+        "ruleCode": "release_reference",
+        "ruleKind": "release",
+        "evaluationOrder": 70,
+        "displayName": "Release formula reference",
+        "valueUnit": "formula_reference",
+        "numericValue": null,
+        "textValue": "future_engine: max(configured_minimum, imported_principal_reference)",
+        "parameters": { "calculation_deferred_to_wp04_plus": true },
+        "agreementCitation": "Synthetic Agreement §7.1"
+      }
+    ]
+  },
+  "inputSnapshot": {
+    "inputSnapshotId": "50000000-0000-4000-8000-000000000001",
+    "organizationId": "10000000-0000-4000-8000-000000000001",
+    "facilityId": "20000000-0000-4000-8000-000000000001",
+    "calculationType": "borrowing_base_engine_proof",
+    "calculationAsOf": "2026-08-26",
+    "calculationTimestamp": "2026-08-26T15:00:00.000Z",
+    "currency": "USD",
+    "synthetic": true,
+    "units": [
+      {
+        "unitId": "CR-V-001",
+        "projectId": "CR-P-01",
+        "collateralClass": "spec_home",
+        "status": "spec_home",
+        "ageReference": {
+          "startEvent": "future_vertical_start",
+          "eventDate": "2026-04-30",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-START-001"
+        },
+        "documentedCost": {
+          "valueCents": "30000000",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-COST-001",
+          "asOfDate": "2026-08-24"
+        },
+        "supportedValue": {
+          "valueCents": "32000000",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-VALUE-001",
+          "asOfDate": "2026-08-20"
+        }
+      },
+      {
+        "unitId": "CR-V-002",
+        "projectId": "CR-P-01",
+        "collateralClass": "presold_home",
+        "status": "presold_home",
+        "ageReference": {
+          "startEvent": "future_vertical_start",
+          "eventDate": "2026-06-11",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-START-002"
+        },
+        "documentedCost": {
+          "valueCents": "36000000",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-COST-002",
+          "asOfDate": "2026-08-24"
+        },
+        "supportedValue": {
+          "valueCents": "35000000",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-VALUE-002",
+          "asOfDate": "2026-08-20"
+        }
+      },
+      {
+        "unitId": "CR-V-003",
+        "projectId": "CR-P-01",
+        "collateralClass": "lot",
+        "status": "lot",
+        "ageReference": {
+          "startEvent": "future_vertical_start",
+          "eventDate": "2026-07-16",
+          "sourceSystem": "synthetic_fixture",
+          "sourceRecordId": "CR-START-003"
+        },
+        "documentedCost": null,
+        "supportedValue": null
+      }
+    ]
+  },
+  "expected": {
+    "status": "succeeded",
+    "intermediates": [
+      { "unitId": "CR-V-001", "basisCents": "30000000", "rateBasisPoints": 7500, "contributionCents": "22500000" },
+      { "unitId": "CR-V-002", "basisCents": "35000000", "rateBasisPoints": 8000, "contributionCents": "28000000" }
+    ],
+    "constraints": [
+      { "ruleCode": "model_concentration", "beforeCents": "0", "limitCents": "0", "afterCents": "0", "binding": false }
+    ],
+    "outputs": {
+      "eligibleBasisCents": "65000000",
+      "uncappedContributionCents": "50500000",
+      "borrowingBaseCents": "50500000"
+    },
+    "replayHash": "18739a612e20fabfd2a92f0f402ba7d4645cb222f4e9117d08d55299f5feb56b"
+  }
+}
